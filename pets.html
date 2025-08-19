@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Adoption Center</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .pet { border: 2px solid #ccc; margin: 10px; padding: 15px; }
+        .available { border-color: green; }
+        .adopted { border-color: red; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <h1>Happy Paws Adoption Center</h1>
+    <div id="pet-list"></div>
+    
+    <script>
+        let pets = [
+            { name: "Garfield", type: "cat", age: 3, adopted: false },
+            { name: ""}
+        ];
+        function displayPet(pet) {
+            let html = `<div>Pet name is ${pet.name}</div>`;
+            let cssClass = pet.adopted ? "pet adopted" : "pet available";
+            // Create HTML string for one pet
+            // Include: name, type, age, and adoption status
+            // Return the HTML string
+        }
+        function showAllPets() {
+            // Get the container div
+            // Loop through pets array
+            // Build up HTML string
+            // Set innerHTML of container
+        }
+        function adoptPet(petName) {
+            // Use a loop to find the pet with matching name
+            // Set their adopted property to true
+            // Call showAllPets() to refresh the display
+        }
+        // Test your functions
+        showAllPets();
+        adoptPet("Garfield"); // Replace with one of your pet names
+    </script>
+</body>
+</html>
