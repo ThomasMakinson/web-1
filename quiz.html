@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Quiz of Doom</title>
+    <link rel="stylesheet" href="quizstyle.css">
+</head>
+<body>
+    <h1>The Quiz of Doom</h1>
+    <form id="quiz-form">
+        <div class="question1">
+            <p>What's my favourite colour?</p>
+            <div class="q1answers">
+                <input type="radio" name="q1" value="amber" id="amber">
+                <label for="amber">Amber</label>
+                <input type="radio" name="q1" value="forest" id="forest">
+                <label for="forest">Forest</label>
+                <input type="radio" name="q1" value="blue" id="blue">
+                <label for="blue">Blue</label>
+            </div>
+        </div>
+
+        <div class="question2">
+            <p>Life, the universe, and everything?</p>
+            <div class="q2answers">
+                <input type="radio" name="q2" value="what?" id="what?">
+                <label for="what?">What?</label>
+                <input type="radio" name="q2" value="42" id="42">
+                <label for="42">42</label>
+                <input type="radio" name="q2" value="reference" id="blue">
+                <label for="blue">I understood that reference!</label>
+            </div>
+        </div>
+
+        <div class="question3">
+            <p>Do you know the Muffin Man?</p>
+            <div class="q3answers">
+                <input type="radio" name="q3" value="muffin" id="muffin">
+                <label for="muffin">The Muffin Man?</label>
+                <input type="radio" name="q3" value="gasp" id="gasp">
+                <label for="gasp">*gasp* The Muffin Man!</label>
+                <input type="radio" name="q3" value="drury" id="drury">
+                <label for="drury">He lives on Drury Lane.</label>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit" id="submit-btn">Check Answers</button>
+    </form>
+    <div id="results"></div>
+    
+    <script src="quizscript.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+
+}
+
+h1 {
+    font-family: 'Copperplate Gothic Light';
+    font-size: 400%;
+    color: #FF0037;
+    text-align: center;
+
+}
+
+#quiz-form {
+    text-align: center;
+    font-family: Candara;
+    font-size: 120%;
+    font-weight: 100;
+    color: white;
+    
+}
+
+.q1answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.q2answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.q3answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#submit-btn {
+    font-family: Candara;
+    background-color: black;
+    border: 2px solid #FF0037;
+    border-radius: 28px;
+    color: #FF0037;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px, 0 0 15px;
+}
