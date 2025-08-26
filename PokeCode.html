@@ -1,0 +1,29 @@
+<script>
+    // fetch some pokemon
+    async function fetchPokes()
+    {
+        const res = await fetch()
+        const pokeData = await res.json();
+        loopPokes(pokeData);
+    }
+    //generate a list of pokes
+    function loopPokes(pokes)
+    {
+        for(pokemon of pokes.results) {
+            const poke = document.createElement("li");
+            poke,className = "btn";
+            poke.innerHTML = poke.name;
+            poke,url = poke.url;
+            document.querySelector(".list").appendChild(poke);
+            poke.addEventListener("click", getMyPokemon);
+        }
+    }
+    async function getMyPokemon(e) (
+        const res = await fetch(e.target.url);
+        const pokeData = await res.json();
+        const panel = document.querySelector("panel");
+        panel.innerHTML = `,<h2>${pokeData.name}<h2/>
+        <img src
+        <h3>Abilities</>  
+    )
+</script>
