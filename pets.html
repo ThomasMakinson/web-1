@@ -16,11 +16,13 @@
     <script>
         let pets = [
             { name: "Garfield", type: "cat", age: 3, adopted: false },
-            { name: ""}
+            { name: "Alfonse", type: "dog", age: 6, adopted: false },
+            { name: "Spot", type: "cat", age: 10, adopted: false },
+            { name: "Sparkles", type: "guinea pig", age: 4, adopted: false }
         ];
-        function displayPet(pet) {
-            let html = `<div>Pet name is ${pet.name}</div>`;
-            let cssClass = pet.adopted ? "pet adopted" : "pet available";
+        function displayPet(pets) {
+            let html = `<div>Pet name is ${pets.name}</div>`;
+            let cssClass = pets.adopted ? "pet adopted" : "pet available";
             // Create HTML string for one pet
             // Include: name, type, age, and adoption status
             // Return the HTML string
