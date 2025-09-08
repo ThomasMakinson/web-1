@@ -46,29 +46,31 @@
 
     <script>
         const dog = {
-            "id": 23,
-            "breed": "German Longhaired Pointer",
-            "origin": "Germany",
-            "size": "Large",
-            "temperament": ["Affectionate", "Energetic", "Intelligent"],
-            "colors": ["Liver", "Liver and White"],
-            "coatType": "Double coat",
-            "coatLength": "Medium",
-            "image": "https://images.dog.ceo/breeds/pointer-germanlonghair/hans2.jpg"
-        }
+            id: 23,
+            breed: "German Longhaired Pointer",
+            origin: "Germany",
+            size: "Large",
+            temperament: ["Affectionate", "Energetic", "Intelligent"],
+            colors: ["Liver", "Liver and White"],
+            coatType: "Double coat",
+            coatLength: "Medium",
+            image: "https://images.dog.ceo/breeds/pointer-germanlonghair/hans2.jpg"
+        };
 
         // Your JavaScript here
-        const card = document.getElementById('single-card');
-        card.querySelector('h2').textContent = dog.breed;
-        card.querySelector('img').src = dog.image;
-        card.querySelector('h3:nth-of-type(1) +p').textContent = dog.origin;
-        card.querySelector('h3:nth-of-type(2) +p').textContent = dog.size;
-        card.querySelector('h3:nth-of-type(3) +p').textContent = dog.temperament(t => `<li>${t}</li>`).join('');
+        const card = document.getElementById("single-card");
+        card.querySelector("h2").textContent = dog.breed;
+        card.querySelector("img").src = dog.image;
+        card.querySelector("h3:nth-of-type(1) +p").textContent = dog.origin;
+        card.querySelector("h3:nth-of-type(2) +p").textContent = dog.size;
+        card.querySelector("h3:nth-of-type(3) + ul").innerHTML = dog.temperament
+            .map((t) => `<li>${t}</li>`)
+            .join("");
 
     </script>
 
     <style>
-        /* Write your styles here (I'm giving you some for free too) */
+        /* Write your styles here (I"m giving you some for free too) */
         .card {
             width: 300px;
             border: 1px solid #333;
@@ -78,7 +80,7 @@
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        h3, h2 {
+        h2, h3 {
             text-transform: uppercase;
         }
         h2 {
@@ -119,7 +121,8 @@
         function renderDogs(dogs) {
             const container = document.getElementById("card-container");
             container.innerHTML = ""; //clear cards
-            dogs.forEach(dog => {
+            
+            dogs.forEach((dog) => {
                 //temperament list
                 let temper = "";
                 for (const temp of dog.temperament) {
@@ -137,8 +140,9 @@
                     <p>${dog.size}</p>
                     <h3>TEMPERAMENT</h3>
                     <ul>${temper}</ul>
-                    </div>`;
-                    container.appendChild(card);
+                    </div>
+                    `;
+            container.appendChild(card);
             });
         }
         loadDogs();
@@ -190,7 +194,7 @@
             if (selectedSize === "all") {
                 renderDogs(allDogs);
             } else {
-                const filtered = allDogs.filter(dog => dog.size.includes(selectedSize));
+                const filtered = allDogs.filter((dog) => dog.size.includes(selectedSize));
                 renderDogs(filtered);
             }
         })
@@ -205,6 +209,18 @@
         body {
             display: flex;
             flex-direction: column-reverse;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: flex;
         }
 
     </style>
